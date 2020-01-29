@@ -33,7 +33,7 @@ startxfce4 &" > ~/.vnc/xstartup
 
 chmod +x ~/.vnc/xstartup
 
-sudo echo "[Unit]
+sudo sh -c "echo \"[Unit]
 Description=Start TightVNC server at startup
 After=syslog.target network.target
 
@@ -50,7 +50,7 @@ ExecStop=/usr/bin/vncserver -kill :%i
 
 [Install]
 WantedBy=multi-user.target
-" > /etc/systemd/system/vncserver@.service 
+\" > /etc/systemd/system/vncserver@.service"
 
 sudo systemctl daemon-reload
 sudo systemctl enable vncserver@1.service
