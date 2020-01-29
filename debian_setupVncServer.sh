@@ -4,6 +4,9 @@
 ###Requires Sudo installation first###
 ######################################
 
+#Execute me like this
+#source <(curl -s "https://raw.githubusercontent.com/qwertycody/Debian_Server_Setup_Utilities/master/debian_setupVncServer.sh")
+
 randpw(){ < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-8};echo;}
 sudo apt-get install -y tightvncserver
 
