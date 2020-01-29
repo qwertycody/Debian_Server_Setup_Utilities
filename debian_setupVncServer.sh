@@ -8,7 +8,7 @@
 #source <(curl -s "https://raw.githubusercontent.com/qwertycody/Debian_Server_Setup_Utilities/master/debian_setupVncServer.sh")
 
 randpw(){ < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-8};echo;}
-sudo apt-get install -y tightvncserver
+sudo apt-get install -y tightvncserver xfce4
 
 VNC_USERNAME="cody"
 VNC_PASSWORD=$(randpw)
